@@ -6,7 +6,7 @@ import IconButton from './IconButton.astro'
 import Linkedin from '@icons/Linkedin.astro'
 import Link from '@icons/link.astro'
 import Email from '@icons/email.astro'
-import { SITES } from '@types/utils.ts'
+import { SOCIAL } from '@types/utils.ts'
 
 ---
 
@@ -19,25 +19,24 @@ import { SITES } from '@types/utils.ts'
     </article>
     <article class="flex flex-col items-center gap-4">
       <div class="hidden w-full items-center justify-evenly gap-2 md:flex">
-        {console.log(SITES)}
-        <PillButton to={SITES} display="flex">
+        <PillButton to={SOCIAL.github} display="flex">
           Github <Link w="25" h="25" fill="#fff" onHover="#000" />
         </PillButton>
-        <PillButton display="flex">
+        <PillButton to={SOCIAL.email} display="flex">
           Email <Link w="25" h="25" fill="#fff" />
         </PillButton>
-        <PillButton display="flex">
+        <PillButton to={SOCIAL.linkedin} display="flex">
           Linkedin <Link w="25" h="25" fill="#fff" onHover="#000" />
         </PillButton>
       </div>
       <div class="flex w-full items-center justify-evenly gap-2 md:hidden">
-        <IconButton>
+        <IconButton to={SOCIAL.github}>
           <Github w="25" h="25" fill="#fff" onHover="#000" />
         </IconButton>
-        <IconButton>
+        <IconButton to={SOCIAL.email}>
           <Email w="25" h="25" fill="#fff" onHover="#000" />
         </IconButton>
-        <IconButton>
+        <IconButton to={SOCIAL.linkedin}>
           <Linkedin w="25" h="25" fill="#fff" onHover="#000" />
         </IconButton>
       </div>

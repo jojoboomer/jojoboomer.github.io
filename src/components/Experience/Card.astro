@@ -15,7 +15,7 @@ interface Tec {
 //   image: string
 // }
 
-const { title, content, tecs, image } = Astro.props
+const { title, content, tecs, image,to } = Astro.props
 const btnStyles =
   ' cursor-pointer border-transparent dark:border-primary bg-primary hover:bg-transparent dark:bg-transparent dark:text-[#fff] hover:dark:bg-primary hover:dark:text-[#000]'
 
@@ -31,8 +31,8 @@ const btnStyles =
     {tecs.map((e: any) => <Tech name={e.name} styles={e.styles} icon="" />)}
   </div>
   <div class="inline-flex gap-2 lg:row-span-1">
-    <Tech name="Source code" icon={Github} styles={btnStyles}>Github</Tech>
-    <Tech name="Site" icon={Link} styles={btnStyles}>Github</Tech>
+    <a href={to.github} target="_blank"><Tech name="Source code" icon={Github} styles={btnStyles}>Github</Tech></a>
+    <a href={to.site} target="_blank"><Tech name="Site" icon={Link} styles={btnStyles}>Github</Tech></a>
   </div>
   <div class="hidden lg:row-span-4 lg:block object-cover"><img src={image} alt={title} class="size-[250px] rounded-sm object-cover" /></div>
 </article>

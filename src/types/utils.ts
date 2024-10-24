@@ -39,13 +39,28 @@ export const PROYECTS: PROYECT[] = [
     },
 ]
 
-interface Site {
-    index?: string;
-  }
+type SiteLinks = {
+    github: string;
+    proyect_1_repo: string;
+    linkedin: string;
+    x: string;
+    email: string;
+  };
 
-export const SITES: Site[] = {
+export const SOCIAL: SiteLinks = {
     github: 'https://github.com/jojosafk',
     proyect_1_repo: 'https://github.com/jojosafk/react-game-center',
     linkedin: 'https://www.linkedin.com/in/joellabrada/',
     x: 'https://x.com/jooeBoomer',
+    email: 'https://x.com/jooeBoomer',
+}
+export const SITES = {
+    portfolio: {
+        github: 'https://github.com/jojosafk/portfolio',
+        site: 'https://github.com/jojosafk/portfolio'
+    },
+    proyect_1: {
+        github: 'https://github.com/jojosafk/react-game-center',
+        site: 'https://github.com/jojosafk/react-game-center'
+    },
 }

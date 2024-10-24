@@ -2,6 +2,7 @@
 import Card from './Card.astro'
 import Container from '@layouts/Container.astro'
 import {PROYECTS} from '@types/utils.ts'
+import {SITES} from '@types/utils.ts'
 
 ---
 
@@ -9,7 +10,7 @@ import {PROYECTS} from '@types/utils.ts'
   <article class="w-full flex flex-col gap-2 md:gap-4">
     {
       PROYECTS.map((e) => {
-        return <Card title={e.title} content={e.description} tecs={e.tecs} image={e.image} />
+        return <Card title={e.title} content={e.description} tecs={e.tecs} image={e.image} to={SITES.proyect_1} />
       })
     }
   </article>

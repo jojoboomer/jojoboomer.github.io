@@ -18,8 +18,7 @@ const { title } = Astro.props
   </head>
   <body>
     <main
-      class="bg-white relative z-10 w-full bg-gradient-to-t  text-black dark:bg-gradient-to-t dark:bg-[#1b1818]  dark:text-white
-      dark:before:opacity-5"
+      class="relative z-10 w-full bg-white bg-gradient-to-t text-black dark:bg-[#1b1818] dark:bg-gradient-to-t dark:text-white dark:before:opacity-5"
     >
       <slot />
     </main>
@@ -35,8 +34,6 @@ const { title } = Astro.props
   *,
   html {
     scroll-behavior: smooth !important;
-    /* scroll-snap-type: y mandatory; */
-    /* scroll-padding: 0; */
   }
   main {
     font-family: 'Poppins';
@@ -48,7 +45,7 @@ const { title } = Astro.props
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 182px;
-    opacity: 0.20;
+    opacity: 0.2;
     top: 0;
     left: 0;
     position: absolute;
