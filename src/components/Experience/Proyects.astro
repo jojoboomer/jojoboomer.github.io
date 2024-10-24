@@ -1,0 +1,16 @@
+---
+import Card from './Card.astro'
+import Container from '@layouts/Container.astro'
+import {PROYECTS} from '@types/utils.ts'
+
+---
+
+<Container styles="" id="proyects" title="Proyects">
+  <article class="w-full flex flex-col gap-2 md:gap-4">
+    {
+      PROYECTS.map((e) => {
+        return <Card title={e.title} content={e.description} tecs={e.tecs} image={e.image} />
+      })
+    }
+  </article>
+</Container>

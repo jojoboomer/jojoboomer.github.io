@@ -1,0 +1,59 @@
+---
+import ArrowDown from '@icons/ArrowDown.astro'
+import Github from '@icons/Github.astro'
+import PillButton from './PillButton.astro'
+import IconButton from './IconButton.astro'
+import Linkedin from '@icons/Linkedin.astro'
+import Link from '@icons/link.astro'
+import Email from '@icons/email.astro'
+import { SITES } from '@types/utils.ts'
+
+---
+
+<section id="home" class="mx-auto mt-0 flex h-screen w-4/5 flex-col justify-between pt-12">
+  <div class="flex h-full flex-col items-center justify-center gap-12 text-center">
+    <article class="flex flex-col items-center justify-center gap-2 text-center">
+      <h3 class="text-4xl font-semibold leading-head tracking-head dark:text-primary">My name is</h3>
+      <h2 class="text-7xl font-semibold leading-head tracking-head text-primary dark:text-inherit">Joel Labrada</h2>
+      <h3 class="text-4xl font-semibold leading-head tracking-head dark:text-primary">Front-end web developer</h3>
+    </article>
+    <article class="flex flex-col items-center gap-4">
+      <div class="hidden w-full items-center justify-evenly gap-2 md:flex">
+        {console.log(SITES)}
+        <PillButton to={SITES} display="flex">
+          Github <Link w="25" h="25" fill="#fff" onHover="#000" />
+        </PillButton>
+        <PillButton display="flex">
+          Email <Link w="25" h="25" fill="#fff" />
+        </PillButton>
+        <PillButton display="flex">
+          Linkedin <Link w="25" h="25" fill="#fff" onHover="#000" />
+        </PillButton>
+      </div>
+      <div class="flex w-full items-center justify-evenly gap-2 md:hidden">
+        <IconButton>
+          <Github w="25" h="25" fill="#fff" onHover="#000" />
+        </IconButton>
+        <IconButton>
+          <Email w="25" h="25" fill="#fff" onHover="#000" />
+        </IconButton>
+        <IconButton>
+          <Linkedin w="25" h="25" fill="#fff" onHover="#000" />
+        </IconButton>
+      </div>
+      <div class="flex w-full items-center justify-center gap-2">
+        <PillButton>Resume</PillButton>
+        <PillButton>Download CV</PillButton>
+      </div>
+    </article>
+  </div>
+
+  <article class="flex w-full items-center justify-center">
+    <button class="mb-5 animate-bounce">
+      <a href="#about"><ArrowDown /></a>
+    </button>
+  </article>
+</section>
+
+ <script is:inline>
+</script> 

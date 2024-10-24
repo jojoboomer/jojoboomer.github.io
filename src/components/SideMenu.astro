@@ -1,0 +1,55 @@
+---
+import LanguageToggle from './Header/LanguageToggle.astro'
+import ThemeToggle from './Header/ThemeToggle.astro'
+
+interface Links {
+  name: string
+  to: string
+}
+
+interface Props {
+  items: Links[]
+}
+
+const { items } = Astro.props
+---
+
+<section
+  id="side-menu"
+  class="dark:text-white text-primary fixed -top-[100vh] right-0 flex h-screen w-full items-center justify-center overflow-x-hidden overflow-y-hidden bg-black transition-all duration-500 ease-out"
+>
+  <ul class="w-3/4">
+    {
+      items.map(({ name, to }) => {
+        return (
+          <li class="box-border w-full border-b-[1px] border-b-white dark:border-b-primary text-right uppercase leading-10">
+            <a data-link="true" href={`#${to}`}>
+              {name}
+            </a>
+          </li>
+        )
+      })
+    }
+    <li class="flex justify-center items-center translate-y-16"><ThemeToggle /></li>
+  </ul>
+</section>
+
+<script>
+  const links = document.querySelectorAll('#side-menu a')
+  const $body = document.querySelector('body')
+
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      $body?.toggleAttribute('menu-open')
+    })
+  })
+</script>
+
+<style>
+  body[menu-open] #side-menu {
+    @apply top-0;
+  }
+  body[menu-open] {
+    @apply overflow-hidden;
+  }
+</style>

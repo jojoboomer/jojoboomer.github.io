@@ -1,0 +1,47 @@
+---
+const { word, to } = Astro.props
+
+const middle = Math.floor(word.length / 2);
+const first = word.slice(0, middle);
+const second = word.slice(middle);
+
+---
+
+<div class="link-1">
+  <a href={`#${to}`} class="uppercase no-underline relative block dark:text-white">
+    <span class="thin">{first}</span><span class="thick">{second}</span>
+  </a>
+</div>
+
+<style>
+
+p {
+  font-weight: 100;
+  font-size: 80%;
+}
+
+[class^="link-"] {
+  display: inline-block;
+}
+
+.link-1 a:before, .link-1 a:after {
+  content: '';
+  border-bottom: solid 1px #CC5725;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+}
+
+.link-1 a:before { left: 0; }
+.link-1 a:after { right: 0; }
+
+.link-1 a:hover:before, .link-1 a:hover:after {
+  width: 50%;
+}
+
+.link-1 a:before, .link-1 a:after {
+  -webkit-transition: all 0.15s ease;
+          transition: all 0.15s ease;
+}
+
+</style>

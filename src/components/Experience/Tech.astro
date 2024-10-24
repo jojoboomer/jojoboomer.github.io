@@ -1,0 +1,19 @@
+---
+import { string } from 'astro:schema';
+
+const { icon, name, styles } = Astro.props;
+
+// interface Props {
+//   name: string;
+//   styles: string;
+// }
+
+---
+
+<div
+class=
+    `border rounded-md flex items-center justify-center gap-1 px-2 py-1 h-max ${styles}`
+    >
+    {Astro.props.icon && <Astro.props.icon  /> } {name}
+  </div>
+  

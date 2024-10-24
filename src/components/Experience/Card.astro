@@ -1,0 +1,38 @@
+---
+import Tech from '@components/Experience/Tech.astro'
+import Github from '@icons/Github.astro'
+import Link from '@icons/link.astro'
+
+interface Tec {
+  name: string
+  styles: string
+}
+
+// interface Props {
+//   title: string
+//   content: string
+//   tecs: Tec[]
+//   image: string
+// }
+
+const { title, content, tecs, image } = Astro.props
+const btnStyles =
+  ' cursor-pointer border-transparent dark:border-primary bg-primary hover:bg-transparent dark:bg-transparent dark:text-[#fff] hover:dark:bg-primary hover:dark:text-[#000]'
+
+---
+
+<!-- <article class="grid grid-flow-col-dense grid-cols-2 grid-rows-3 group relative box-border w-full rounded-lg border bg-primary px-4 shadow dark:border-primary"> -->
+<article
+  class="grid-rows-card gap-x-2 md:gap-x-6 lg:grid-cols-card  relative box-border grid w-full grid-flow-col-dense grid-cols-1 rounded-lg  border-primary border bg-primary bg-opacity-10 px-12 py-6 shadow dark:border-primary dark:bg-black dark:bg-opacity-45 lg:grid-rows-3"
+>
+  <div class="tracking-head leading-subhead pb-2 text-xl font-semibold dark:text-primary lg:row-span-1">{title}</div>
+  <div class="tracking-text h-max pb-6 lg:row-span-1 dark:text-white text-primary">{content}</div>
+  <div class="inline-flex flex-wrap gap-2 pb-2 lg:row-span-1">
+    {tecs.map((e: any) => <Tech name={e.name} styles={e.styles} icon="" />)}
+  </div>
+  <div class="inline-flex gap-2 lg:row-span-1">
+    <Tech name="Source code" icon={Github} styles={btnStyles}>Github</Tech>
+    <Tech name="Site" icon={Link} styles={btnStyles}>Github</Tech>
+  </div>
+  <div class="hidden lg:row-span-4 lg:block object-cover"><img src={image} alt={title} class="size-[250px] rounded-sm object-cover" /></div>
+</article>

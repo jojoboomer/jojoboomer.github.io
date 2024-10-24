@@ -1,0 +1,22 @@
+---
+import LinkNav from '@components/Header/LinkNav.astro'
+import Link from '@icons/link.astro'
+import { MENU } from '@types/utils.ts'
+---
+
+<footer class="flex w-full flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-2 border-primary py-4 shadow-top ">
+  <div class="w-full md:w-2/4 h-full flex flex-col items-center justify-center gap-4 text-center">
+    <div><h5>Copyright © 2024 - Developed by José Joel Labrada</h5></div>
+    <div>
+      <p>
+        This portfolio has built with Astro + Tailwind. <a
+          class="text-primary hover:opacity-80"
+          href="https://github.com/jojosafk">Souce code</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-grow flex-row md:flex-col items-center justify-center gap-4 px-12 uppercase">
+    {MENU.map(({name,to}) => <LinkNav word={name} to={to}/>)}
+  </div>
+</footer>
