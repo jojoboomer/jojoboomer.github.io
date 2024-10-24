@@ -5,9 +5,10 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@icons/*": ["src/icons/*"],
-      "@types/*": ["src/types/*"],
+      "@types/*": ["src/@types/*"],
       "@pages/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"]
+      
     }
   }
 }

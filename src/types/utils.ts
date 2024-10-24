@@ -1,4 +1,4 @@
-interface ROUTE {
+export type ROUTE = {
     name: string
     to: string
 }
