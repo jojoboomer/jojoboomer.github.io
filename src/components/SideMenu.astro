@@ -1,13 +1,9 @@
 ---
 import ThemeToggle from './Header/ThemeToggle.astro'
-
-interface Links {
-  name: string
-  to: string
-}
+import type {ROUTE} from '../types/utils'
 
 interface Props {
-  items: Links[]
+  items: ROUTE[]
 }
 
 const { items } = Astro.props

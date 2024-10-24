@@ -1,7 +1,11 @@
 ---
 
 const {  name, styles } = Astro.props;
-
+interface Props {
+  name: string
+  styles: string
+  icon: string | any //TODO
+}
 ---
 
 <div

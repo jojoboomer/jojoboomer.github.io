@@ -1,6 +1,12 @@
 ---
 import SubTitle from "@components/SubTitle.astro";
 
+interface Props {
+  styles: string
+  id: string
+  title: string
+}
+
 const { styles, id, title } = Astro.props;
 ---
 

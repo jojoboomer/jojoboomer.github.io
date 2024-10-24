@@ -1,12 +1,15 @@
 ---
-const customStyles = Astro.props
+interface Props {
+  to: string
+}
+const {to} = Astro.props
 ---
 
 
 <!-- HTML !-->
-<button class:list={["button-81 group",{customStyles}]} role="button">
+<a href={to} target="_blank" class:list={["button-81 group"]} role="button">
   <slot></slot>
-</button>
+</a>
 
 <style>
   /* CSS */

@@ -1,9 +1,21 @@
 ---
-import Tech from '@components/Experience/Tech.astro'
+import Tech from '@components/Tech.astro'
 import Github from '@icons/Github.astro'
 import Link from '@icons/link.astro'
+import type {SITE} from '../../types/utils'
 
+type TECS = {
+  name: string
+  styles: string
+}
 
+interface Props {
+  title: string
+  content: string
+  tecs: TECS[]
+  image: string
+  to: SITE
+}
 
 const { title, content, tecs, image,to } = Astro.props
 const btnStyles =

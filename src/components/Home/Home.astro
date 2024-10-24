@@ -7,6 +7,7 @@ import Linkedin from '@icons/Linkedin.astro'
 import Link from '@icons/link.astro'
 import Email from '@icons/email.astro'
 import { SOCIAL } from '../../types/utils'
+import SocialSection from '@components/SocialSection.astro'
 
 ---
 
@@ -18,31 +19,10 @@ import { SOCIAL } from '../../types/utils'
       <h3 class="text-4xl font-semibold leading-head tracking-head dark:text-primary">Front-end web developer</h3>
     </article>
     <article class="flex flex-col items-center gap-4">
-      <div class="hidden w-full items-center justify-evenly gap-2 md:flex">
-        <PillButton to={SOCIAL.github} display="flex">
-          Github <Link w="25" h="25" fill="#fff" onHover="#000" />
-        </PillButton>
-        <PillButton to={SOCIAL.email} display="flex">
-          Email <Link w="25" h="25" fill="#fff" />
-        </PillButton>
-        <PillButton to={SOCIAL.linkedin} display="flex">
-          Linkedin <Link w="25" h="25" fill="#fff" onHover="#000" />
-        </PillButton>
-      </div>
-      <div class="flex w-full items-center justify-evenly gap-2 md:hidden">
-        <IconButton to={SOCIAL.github}>
-          <Github w="25" h="25" fill="#fff" onHover="#000" />
-        </IconButton>
-        <IconButton to={SOCIAL.email}>
-          <Email w="25" h="25" fill="#fff" onHover="#000" />
-        </IconButton>
-        <IconButton to={SOCIAL.linkedin}>
-          <Linkedin w="25" h="25" fill="#fff" onHover="#000" />
-        </IconButton>
-      </div>
+      <SocialSection/>
       <div class="flex w-full items-center justify-center gap-2">
-        <PillButton>Resume</PillButton>
-        <PillButton>Download CV</PillButton>
+        <PillButton to=''>Resume</PillButton>
+        <PillButton to=''>Download CV</PillButton>
       </div>
     </article>
   </div>

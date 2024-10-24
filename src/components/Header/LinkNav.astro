@@ -1,4 +1,8 @@
 ---
+interface Props {
+  word: string
+  to: string
+}
 const { word, to } = Astro.props
 
 const middle = Math.floor(word.length / 2);
