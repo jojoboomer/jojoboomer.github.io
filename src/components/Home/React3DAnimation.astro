@@ -1,0 +1,53 @@
+---
+---
+    <canvas class="webgl"></canvas>
+
+<script>
+import * as THREE from "three"
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+
+const canvas = document.querySelector('canvas.webgl')
+
+//scene
+const scene = new THREE.Scene()
+
+//Create sizes const
+const sizes = {
+    width: 250,//window.innerWidth,
+    height: 250//window.innerHeight
+}
+
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+camera.position.z = 4 //moving the camera back
+scene.add(camera)
+
+const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    antialias: true,
+    alpha: true
+})
+renderer.setSize(sizes.width, sizes.height)
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+// loading 3d model
+const loader = new GLTFLoader();
+let reactFigure;
+loader.load('react.glb', function (gltf) {
+    reactFigure = gltf.scene;
+    scene.add(gltf.scene);
+}, undefined, function (error) {
+    console.error(error);
+});
+
+//Capturando movimiento
+function animate() {
+    if (reactFigure) reactFigure.rotation.y += 0.02
+    if (reactFigure) reactFigure.rotation.x += 0.02
+    renderer.render(scene, camera)
+    window.requestAnimationFrame(animate)
+}
+
+animate()
+
+</script>

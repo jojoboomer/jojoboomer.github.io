@@ -12,7 +12,11 @@ const second = word.slice(middle);
 ---
 
 <div class="link-1">
-  <a href={`#${to}`} class="uppercase no-underline relative block dark:text-white">
+  <a href={`#${to}`} class="uppercase no-underline relative block dark:text-white transition-all
+  before:duration-75 before:ease-linear before:left-0 before:content-[''] before:border-b-[1px] before:border-b-primary before:absolute before:bottom-0 before:w-0 
+  after:duration-75 after:ease-linear after:right-0 after:content-[''] after:border-b-[1px] after:border-b-primary after:absolute after:bottom-0 after:w-0 
+  after:hover:w-2/4 before:hover:w-2/4
+  ">
     <span class="thin">{first}</span><span class="thick">{second}</span>
   </a>
 </div>
@@ -26,26 +30,6 @@ p {
 
 [class^="link-"] {
   display: inline-block;
-}
-
-.link-1 a:before, .link-1 a:after {
-  content: '';
-  border-bottom: solid 1px #CC5725;
-  position: absolute;
-  bottom: 0;
-  width: 0;
-}
-
-.link-1 a:before { left: 0; }
-.link-1 a:after { right: 0; }
-
-.link-1 a:hover:before, .link-1 a:hover:after {
-  width: 50%;
-}
-
-.link-1 a:before, .link-1 a:after {
-  -webkit-transition: all 0.15s ease;
-          transition: all 0.15s ease;
 }
 
 </style>
