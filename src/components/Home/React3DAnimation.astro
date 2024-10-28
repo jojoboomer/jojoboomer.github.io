@@ -1,16 +1,25 @@
 ---
 ---
-    <canvas class="webgl"></canvas>
+<canvas class="webgl"></canvas>
 
 <script>
 import * as THREE from "three"
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 
 const canvas = document.querySelector('canvas.webgl')
 
 //scene
 const scene = new THREE.Scene()
+
+let ambientLight = new THREE.AmbientLight(0x101010, 1);
+scene.add(ambientLight)
+
+let sunlight = new THREE.DirectionalLight(0xffffff, 2);
+sunlight.position.y = 10;
+sunlight.position.x = 10;
+    // directionalLight.position.set(1, 1, 1).normalize();
+scene.add(sunlight)
+
 
 //Create sizes const
 const sizes = {

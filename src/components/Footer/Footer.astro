@@ -9,18 +9,20 @@ import SocialSection from '@components/SocialSection.astro'
 <footer id="contact" class="flex w-full flex-col-reverse px-4 md:flex-row items-center justify-center gap-8 md:gap-2 border-primary py-4 shadow-top tracking-text leading-text ">
   <article class="w-full md:w-2/4 h-full flex flex-col items-center justify-center gap-6 text-center">
     <div><SocialSection customStyles="absolute" /></div>
-    <div class="">
+    <div class="text-sm">
       <h5>Copyright © 2024 - Developed by José Joel Labrada</h5>
       <p>
         This portfolio has built with Astro + Tailwind. <a
-          class="text-primary hover:opacity-80"
-          href={SITES.portfolio.github} target="_blank">Souce code</a
+        class="text-primary hover:opacity-80"
+        href={SITES.portfolio.github} target="_blank">Souce code</a
         >
+        <h5>React sketch by <a class="text-primary hover:opacity-80"
+          href="https://sketchfab.com/xenadus" target="_blank" >xenadus</a></h5>
       </p>
     </div>
   </article>
   <article class="flex w-2/4 justify-center items-center md:px-8">
-    <div class="flex flex-grow flex-wrap flex-row md:flex-col items-center justify-center gap-4 uppercase">
+    <div class="flex flex-grow flex-wrap flex-row md:flex-col items-center justify-center gap-1 uppercase">
       {MENU.map(({name,to}:ROUTE) => <LinkNav word={name} to={to}/>)}
     </div>
   </article>

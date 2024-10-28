@@ -16,10 +16,10 @@
   :global(.dark) .sun { fill: transparent; }
   :global(.dark) .moon { fill: white; }
 
-  body [menu-open] #theme-toggle-light-icon {
+  body [menu-open] .sun {
     @apply fill-primary;
   }
-  body[menu-open] #theme-toggle-dark-icon {
+  body[menu-open] .moon {
     @apply fill-primary;
   }
 </style>
@@ -52,5 +52,8 @@ const getTheme = ()=>{
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }
 
-  document.getElementById("themeToggle")?.addEventListener("click", handleToggleClick);
+  document.querySelectorAll("#themeToggle").forEach((e)=>{
+    e.addEventListener("click", handleToggleClick);
+  })
+  // document.getElementById("themeToggle")?.addEventListener("click", handleToggleClick);
 </script>
