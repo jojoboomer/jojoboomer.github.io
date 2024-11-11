@@ -5,16 +5,12 @@ export type ROUTE = {
 export const MENU: ROUTE[] = [
   { name: "home", to: "" },
   { name: "About", to: "about" },
-  // { name: 'Services', href: '#services' },
   { name: "Work", to: "work" },
   { name: "Proyects", to: "proyects" },
   { name: "Contact", to: "contact" },
 ];
 
-interface TECH {
-  name: string;
-  styles: string;
-}
+
 interface PROYECT {
   title: string;
   description: string;

@@ -1,9 +1,8 @@
 ---
-const { to, styles } = Astro.props;
+const { to } = Astro.props;
 
 interface Props {
   to: string;
-  styles?: string;
 }
 
 const user = to.split("/").at(-1);
