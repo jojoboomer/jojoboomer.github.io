@@ -1,0 +1,34 @@
+---
+interface Props {
+  word: string;
+  to: string;
+}
+const { word, to } = Astro.props;
+
+const middle = Math.floor(word.length / 2);
+const first = word.slice(0, middle);
+const second = word.slice(middle);
+---
+
+<div class="link-1">
+  <a
+    href={`#${to}`}
+    class="uppercase no-underline relative block text-primary-700 dark:text-white transition-all
+  before:duration-75 before:ease-linear before:left-0 before:content-[''] before:border-b-[1px] before:border-b-primary-700 before:absolute before:bottom-0 before:w-0
+  after:duration-75 after:ease-linear after:right-0 after:content-[''] after:border-b-[1px] after:border-b-primary-700 after:absolute after:bottom-0 after:w-0
+  after:hover:w-2/4 before:hover:w-2/4"
+  >
+    <span class="thin">{first}</span><span class="thick">{second}</span>
+  </a>
+</div>
+
+<style>
+  p {
+    font-weight: 100;
+    font-size: 80%;
+  }
+
+  [class^="link-"] {
+    display: inline-block;
+  }
+</style>

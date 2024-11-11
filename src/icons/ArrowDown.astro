@@ -1,10 +1,15 @@
+---
+const { h = 25, w = 25 } = Astro.props;
+---
+
 <svg
-id="arrow-down"
+  id="arrow-down"
   fill="none"
   viewBox="0 0 24 24"
   stroke-width="1.5"
   stroke="currentColor"
-  class="size-6"
+  width={w}
+  height={h}
 >
   <path
     stroke-linecap="round"

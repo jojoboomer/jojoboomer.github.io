@@ -1,15 +1,19 @@
 ---
-import SideMenu from '@components/SideMenu.astro'
-import NavBar from './NavBar.astro'
-import ThemeToggle from './ThemeToggle.astro'
-import { MENU } from '../../types/utils'
+import SideMenu from "@components/SideMenu.astro";
+import { MENU } from "../../types/utils";
+import NavBar from "./Navbar/NavBar.astro";
+import ThemeToggle from "@components/ThemeToggle.astro";
 ---
 
 <section
   id="header"
-  class="fixed top-0 z-10 inline-flex w-full items-center justify-between px-12 py-4 shadow-lg backdrop-blur-lg transition duration-200 ease-in-out"
+  class="fixed bg-lightmode dark:bg-transparent top-0 z-10 inline-flex w-full items-center justify-between px-12 py-4 shadow-lg backdrop-blur-lg transition duration-200 ease-in-out"
 >
-  <a href="#" class="w-full cursor-pointer text-lg font-bold uppercase text-primary">José Joel Labrada</a>
+  <a
+    href="#"
+    class="w-full cursor-pointer text-lg font-bold uppercase text-primary-700"
+    >José Joel Labrada</a
+  >
   <NavBar items={MENU} />
   <div class="hidden md:flex">
     <ThemeToggle />
@@ -19,22 +23,22 @@ import { MENU } from '../../types/utils'
 </section>
 
 <script is:inline>
-  var prevScrollpos = window.pageYOffset
-  var headerDiv = document.querySelector('#header')
-  var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight
+  var prevScrollpos = window.pageYOffset;
+  var headerDiv = document.querySelector("#header");
+  var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
 
   window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset
+    var currentScrollPos = window.pageYOffset;
     /* if scrolling down, let it scroll out of view as normal */
     if (prevScrollpos <= currentScrollPos && currentScrollPos > headerBottom) {
-      headerDiv.classList.remove('fixedToTop')
-      headerDiv.style.top = '-7.2rem'
+      headerDiv.classList.remove("fixedToTop");
+      headerDiv.style.top = "-7.2rem";
     } else {
       /* otherwise if we're scrolling up, fix the nav to the top */
-      headerDiv.classList.add('fixedToTop')
-      headerDiv.style.top = '0'
+      headerDiv.classList.add("fixedToTop");
+      headerDiv.style.top = "0";
     }
 
-    prevScrollpos = currentScrollPos
-  }
+    prevScrollpos = currentScrollPos;
+  };
 </script>

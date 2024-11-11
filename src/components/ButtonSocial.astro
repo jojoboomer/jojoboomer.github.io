@@ -1,0 +1,25 @@
+---
+const { to, styles } = Astro.props;
+
+interface Props {
+  to: string;
+  styles?: string;
+}
+
+const user = to.split("/").at(-1);
+---
+
+<button
+  class="group dark:hover:bg-primary relative dark:bg-transparent hover:scale-110
+   rounded text-neutral-50 duration-500 font-semibold
+   text-sm flex justify-start gap-2 items-center p-2 pr-4"
+>
+  <slot />
+  <span class="border-l-2 px-1">{user}</span>
+</button>
+
+<style>
+  :root {
+    --hover-color: #{color};
+  }
+</style>

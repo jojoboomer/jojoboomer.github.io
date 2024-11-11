@@ -1,70 +1,59 @@
 ---
-import ArrowDown from '@icons/ArrowDown.astro'
-import Github from '@icons/Github.astro'
-import PillButton from './PillButton.astro'
-import IconButton from './IconButton.astro'
-import Linkedin from '@icons/Linkedin.astro'
-import Link from '@icons/link.astro'
-import Email from '@icons/email.astro'
-import { SOCIAL } from '../../types/utils'
-import React3DAnimation from './React3DAnimation.astro'
-
+import ArrowDown from "@icons/ArrowDown.astro";
+import Github from "@icons/social/Github.astro";
+import ButtonIcon from "@components/ButtonIcon.astro";
+import Linkedin from "@icons/social/Linkedin.astro";
+import Email from "@icons/social/Email.astro";
+import { SOCIAL } from "../../types/utils";
+import ButtonPrimary from "@components/ButtonPrimary.astro";
 ---
 
-<section id="home" class="mx-auto mt-0 flex h-screen w-4/5 flex-col justify-between pt-12">
-  <div class="flex flex-col md:flex-row text-center md:text-left h-full items-center justify-center ">
-    <article class="flex flex-col gap-12 flex-grow justify-center ">
-      <div class="flex flex-col items-center md:items-start justify-center">
-        <h3 class="text-4xl font-semibold leading-head tracking-head text-inherit">My name is</h3>
-        <h2 class="text-7xl font-semibold leading-head tracking-head text-inherit">Joel Labrada</h2>
-        <h3 class="text-4xl font-semibold leading-head tracking-head text-inherit">Front-end web developer</h3>
+<div class="bg-primary dark:bg-transparent shadow-sm">
+  <section
+    id="home"
+    class="mx-auto mt-0 flex h-screen w-4/5 flex-col justify-between pt-12"
+  >
+    <div
+      class="flex flex-col md:flex-row text-center md:text-left h-full items-center justify-center font-semibold leading-head tracking-head text-inherit"
+    >
+      <div class="flex flex-col gap-12 flex-grow justify-center">
+        <article
+          class="flex flex-col items-center md:items-start justify-center text-white uppercase"
+        >
+          <h2 class="text-6xl">Hi</h2>
+          <h2 class="text-6xl">I'm john doe</h2>
+          <h2 class="text-6xl">Front-end developer</h2>
+          <!-- <h3 class="text-4xl font-semibold">My name is</h3> -->
+          <!-- <h2 class="text-7xl ">Joel Labrada</h2> -->
+          <!-- <h3 class="text-4xl font-semibold">Front-end web developer</h3> -->
+        </article>
+        <article class="flex gap-8 justify-start items-center">
+          <div class="justify-start gap-6 flex">
+            <ButtonIcon to={SOCIAL.github}>
+              <Github w="25" h="25" styles="fill-white" />
+            </ButtonIcon>
+            <ButtonIcon to={SOCIAL.github}>
+              <Email w="25" h="25" styles="fill-white" />
+            </ButtonIcon>
+            <ButtonIcon to={SOCIAL.github}>
+              <Linkedin w="25" h="25" styles="fill-white" />
+            </ButtonIcon>
+          </div>
+          <div class="flex items-end gap-2 justify-center md:justify-start">
+            <!-- <ButtonPrimary label='Resume' to='/Jose Joel Labrada.pdf'/> -->
+            <ButtonPrimary label="Download CV" to="/Jose Joel Labrada.pdf" />
+          </div>
+        </article>
       </div>
-      <div class="flex flex-col gap-4 ">
-        <div class="hidden w-full items-center gap-2 md:flex">
-          <PillButton to={SOCIAL.github} >
-            Github <Link w="25" h="25" dark="#fff" light="#000" />
-          </PillButton>
-          <PillButton to={SOCIAL.email} >
-            Email <Link w="25" h="25" dark="#fff" light="#000"/>
-          </PillButton>
-          <PillButton to={SOCIAL.linkedin} >
-            Linkedin <Link w="25" h="25" dark="#fff" light="#000" />
-          </PillButton>
-        </div>
-        <div class="flex w-full items-center justify-center gap-4 md:hidden">
-          <IconButton to={SOCIAL.github}>
-            <Github w="25" h="25" fill="#fff" onHover="#000" />
-          </IconButton>
-          <IconButton to={SOCIAL.email}>
-            <Email w="25" h="25" fill="#fff" onHover="#000" />
-          </IconButton>
-          <IconButton to={SOCIAL.linkedin}>
-            <Linkedin w="25" h="25" fill="#fff" onHover="#000" />
-          </IconButton>
-        </div>
-        <div class="flex w-full items-center gap-2 justify-center md:justify-start">
-          <PillButton to=''>Resume</PillButton>
-          <a href='/Jose Joel Labrada.pdf' download class=' group
-          flex justify-center items-center gap-2 transition-alltouch-manipulation translate-y-0 duration-300 active:translate-y-1 md:px-4 md:py-2 md:text-sm
-          rounded-3xl cursor-pointer font-mono text-base font-extrabold leading-4 px-6 py-3 text-center decoration-auto
-          border border-primary dark:bg-inherit dark:hover:bg-primary dark:text-white dark:hover:text-black
-          text-black bg-primary hover:bg-transparent hover:text-black
-          ' role="button">Download CV</a>
-        </div>
-      </div>
-    </article>
-    <article class="dark:bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#3958d61a] via-transparent to-transparent justify-center items-center mx-autos hidden md:flex">
+      <!-- <article class="dark:bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#3958d61a] via-transparent to-transparent justify-center items-center mx-autos hidden md:flex">
         <React3DAnimation/>
-    </article>
+    </article> -->
+    </div>
 
-  </div>
-
-  <article class="flex w-full items-center justify-center">
-    <button class="mb-5 animate-bounce text-white">
-      <a href="#about"><ArrowDown /></a>
-    </button>
-  </article>
-</section>
-
- <script is:inline>
-</script> 
+    <div class="flex w-full items-center justify-center">
+      <button class="mb-5 animate-bounce text-white">
+        <a href="#about"><ArrowDown /></a>
+      </button>
+    </div>
+  </section>
+</div>

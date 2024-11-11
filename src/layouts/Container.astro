@@ -1,10 +1,10 @@
 ---
-import SubTitle from "@components/SubTitle.astro";
+import Title from "@components/Title.astro";
 
 interface Props {
-  styles: string
-  id: string
-  title: string
+  styles: string;
+  id: string;
+  title: string;
 }
 
 const { styles, id, title } = Astro.props;
@@ -14,6 +14,6 @@ const { styles, id, title } = Astro.props;
   id={`${id}`}
   class:list={["w-11/12 md:w-3/4 mt-0 mx-auto pt-2 pb-10", styles]}
 >
-  <SubTitle>{title}</SubTitle>
+  <Title>{title}</Title>
   <slot />
 </section>

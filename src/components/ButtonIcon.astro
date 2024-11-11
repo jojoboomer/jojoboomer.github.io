@@ -1,0 +1,16 @@
+---
+const { to, label } = Astro.props;
+
+interface Props {
+  to: string;
+  label?: string;
+}
+---
+
+<a
+  href={to}
+  target="_blank"
+  class="group transform relative focus:outline-none transition-transform duration-200 hover:scale-125"
+>
+  <slot />
+</a>

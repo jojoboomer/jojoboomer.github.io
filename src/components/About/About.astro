@@ -1,41 +1,36 @@
 ---
-import Container from '@layouts/Container.astro'
-
-// const TECH = [
-//   { name: 'HTML', icon: '', color: '', rate: '' },
-//   { name: 'CSS', icon: '', color: '', rate: '' },
-//   { name: 'JavaScript', icon: '', color: '', rate: '' },
-//   { name: 'Astro', icon: '', color: '', rate: '' },
-//   { name: 'React', icon: '', color: '', rate: '' },
-//   { name: 'Next', icon: '', color: '', rate: '' },
-//   { name: 'Node', icon: '', color: '', rate: '' },
-//   { name: 'PHP', icon: '', color: '', rate: '' },
-// ]
+import Container from "@layouts/Container.astro";
+import Skills from "@components/Skills/Skills.astro";
 ---
 
 <Container styles="" id="about" title="About me">
   <article>
-    <p class="leading-tight tracking-text">
-      Mi nombre es Jose Joel Labrada, y son un apasionado del mundo del desarrollo web. LLevo más de tres años
-      trabajando tanto en el back-end como en el front-end, siendo este ultimo el campo en el que me enfoco actualmente.
+    <!-- <p class="leading-tight tracking-text">
+      Mi nombre es Jose Joel Labrada, y son un apasionado del mundo del
+      desarrollo web. LLevo más de tres años trabajando tanto en el back-end
+      como en el front-end, siendo este ultimo el campo en el que me enfoco
+      actualmente.
     </p>
-    <br>
+    <br /> -->
+    <!-- <p class="leading-tight tracking-text">
+      A lo largo de mi formación, he podido adquirir la capacidad de
+      materializar ideas en soluciones eficientes y funcionales. Me gusta el
+      trabajo directo con los clientes para lograr una retroalimentación que de
+      lugar a una aplicación única. Busco constantemente expandirme en el mundo
+      del desarrollo web, aprendiendo continuamente y conectando con
+      profesionales del sector para colaborar y seguir mejorando.
+    </p><br /> -->
     <p class="leading-tight tracking-text">
-      A lo largo de mi formación, he podido adquirir la capacidad de materializar ideas en soluciones eficientes y
-      funcionales. Me gusta el trabajo directo con los clientes para lograr una retroalimentación que de lugar a una
-      aplicación única. Busco constantemente expandirme en el mundo del desarrollo web, aprendiendo
-      continuamente y conectando con profesionales del sector para colaborar y seguir mejorando.
-    </p>
+      My name is Jose Joel Labrada, and I am passionate about the world of web
+      development. I have over three years of experience working in both
+      back-end and front-end development, with the latter being the area I
+      currently focus on.
+    </p><br />
+    <p class="leading-tight tracking-text"></p>
+    Throughout my training, I have gained the ability to turn ideas into efficient
+    and functional solutions. I enjoy working directly with clients to achieve feedback
+    that leads to a unique application. I am constantly seeking to expand my knowledge
+    in the web development field, continuously learning and connecting with professionals
+    in the industry to collaborate and keep improving.
   </article>
-  <!-- <article>
-    <CodeContainer title="My Tech Experience">
-      <div class="inline-flex w-full flex-wrap items-center justify-center gap-2">
-        {
-          TECH.map(({ name, color, icon, rate }) => {
-            return <TechSquare name={name} color={color} icom={icon} />
-          })
-        }
-      </div>
-    </CodeContainer>
-  </article> -->
 </Container>

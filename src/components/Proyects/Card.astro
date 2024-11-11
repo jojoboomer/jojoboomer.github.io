@@ -1,43 +1,60 @@
 ---
-import Tech from '@components/Tech.astro'
-import Github from '@icons/Github.astro'
-import Link from '@icons/link.astro'
-import ImagePlaceholder from '@assets/images/placeholder-image.webp'
-import { Image } from 'astro:assets';
+import Tech from "@components/Tech.astro";
+import Github from "@icons/social/Github.astro";
+import Link from "@icons/LinkTo.astro";
+import ImagePlaceholder from "@assets/images/placeholder-image.webp";
+import { Image } from "astro:assets";
 
-import type {SITE} from '../../types/utils'
+import type { SITE } from "../../types/utils";
 
 type TECS = {
-  name: string
-  styles: string
-}
+  name: string;
+  styles: string;
+};
 
 interface Props {
-  title: string
-  content: string
-  tecs: TECS[]
-  image: string
-  to: SITE
+  title: string;
+  content: string;
+  tecs: TECS[];
+  image: string;
+  to: SITE;
 }
 
-const { title, content, tecs, image,to } = Astro.props
+const { title, content, tecs, image, to } = Astro.props;
 const btnStyles =
-  'cursor-pointer border-transparent dark:border-primary bg-primary hover:bg-transparent dark:bg-transparent dark:text-[#fff] group-hover:dark:bg-primary group-hover:dark:text-[#000]'
-
+  "cursor-pointer border-transparent dark:border-primary bg-primary hover:bg-transparent dark:bg-transparent dark:text-[#fff] group-hover:dark:bg-primary group-hover:dark:text-[#000]";
 ---
 
 <!-- <article class="grid grid-flow-col-dense grid-cols-2 grid-rows-3 group relative box-border w-full rounded-lg border bg-primary px-4 shadow dark:border-primary"> -->
 <article
-  class="grid-rows-card gap-x-2 md:gap-x-6 lg:grid-cols-card  relative box-border grid w-full grid-flow-col-dense grid-cols-1 rounded-lg  border-primary-100 border bg-primary bg-opacity-10 px-12 py-6 shadow dark:border-primary-900 dark:bg-black dark:bg-opacity-45 lg:grid-rows-3"
+  class="grid-rows-card gap-x-2 md:gap-x-6 lg:grid-cols-card relative box-border grid w-full grid-flow-col-dense grid-cols-1 rounded-lg border-primary-100 border bg-primary bg-opacity-10 px-12 py-6 shadow dark:border-primary-900 dark:bg-black dark:bg-opacity-45 lg:grid-rows-3"
 >
-  <div class="tracking-head leading-subhead pb-2 text-xl font-semibold dark:text-primary lg:row-span-1">{title}</div>
-  <div class="tracking-text h-max pb-6 lg:row-span-1 dark:text-white text-primary">{content}</div>
+  <div
+    class="tracking-head leading-subhead pb-2 text-xl font-semibold dark:text-primary lg:row-span-1"
+  >
+    {title}
+  </div>
+  <div
+    class="tracking-text h-max pb-6 lg:row-span-1 dark:text-white text-primary"
+  >
+    {content}
+  </div>
   <div class="inline-flex flex-wrap gap-2 pb-2 lg:row-span-1">
     {tecs.map((e: any) => <Tech name={e.name} styles={e.styles} icon="" />)}
   </div>
   <div class="inline-flex gap-2 lg:row-span-1">
-    <a href={to.github} target="_blank" class="group"><Tech name="Source code" icon={Github} styles={btnStyles}/></a>
-    <a href={to.site} target="_blank" class="group"><Tech name="Site" icon={Link} styles={btnStyles}/></a>
+    <a href={to.github} target="_blank" class="group"
+      ><Tech name="Source code" icon={Github} styles={btnStyles} /></a
+    >
+    <a href={to.site} target="_blank" class="group"
+      ><Tech name="Site" icon={Link} styles={btnStyles} /></a
+    >
   </div>
-  <div class="hidden lg:row-span-4 lg:block object-cover"><Image src={image ? image : ImagePlaceholder} alt={title} class="size-[250px] rounded-sm object-cover" /></div>
+  <div class="hidden lg:row-span-4 lg:block object-cover">
+    <img
+      src={image ? image : ImagePlaceholder}
+      alt={title}
+      class="size-[250px] rounded-sm object-center object-contain"
+    />
+  </div>
 </article>

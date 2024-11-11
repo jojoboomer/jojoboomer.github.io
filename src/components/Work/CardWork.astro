@@ -1,0 +1,69 @@
+---
+import Tech from "../Tech.astro";
+import Container from "@layouts/Container.astro";
+import HTML from "@icons/technologies//Html.astro";
+import CSS from "@icons/technologies//Css.astro";
+import JS from "@icons/technologies//Javascript.astro";
+import PHP from "@icons/technologies//Php.astro";
+import MYSQL from "@icons/technologies//Mysql.astro";
+import GIT from "@icons/technologies//Git.astro";
+---
+
+<div class="group relative py-6 pl-8 sm:pl-32">
+    <h4 class="mb-1 text-xl font-medium sm:mb-0 tracking-head">Full-stack developer</h4>
+    <div
+      class="mb-1 flex items-start gap-3 before:absolute before:left-2 before:h-full before:-translate-x-1/2 before:translate-y-3 before:self-start dark:before:bg-slate-300 before:bg-slate-600 before:px-px after:absolute after:left-2 after:box-content after:h-2 after:w-2 after:-translate-x-1/2 after:translate-y-1.5 after:rounded-full after:border-4 after:border-primary after:bg-primary group-last:before:hidden sm:flex-row sm:before:left-0 sm:before:ml-[6.5rem] sm:after:left-0 sm:after:ml-[6.5rem]"
+    >
+      <time
+        class="left-0 mb-3 inline-flex translate-y-0.5 items-center justify-center text-xs font-semibold uppercase sm:absolute sm:mb-0"
+        >Jan, 2022</time
+      >
+      <div class="translate-y-0.5 text-xs">Xetid, Havana</div>
+    </div>
+    <p class="tracking-text leading-text font-normal">
+      I participated in a development team where I worked on more than 5 web
+      projects on the "Bienestar" Platform, to managing various types of
+      procedures (legal, business, internal company processes, etc.).
+      <br /><br />I worked with clients on automating their internal
+      processes, as well as others focused on service delivery (e.g., Ministry
+      of Justice of Cuba). In this role, in addition to development, I carried
+      out tasks such as gathering requirements, attending meetings, among
+      others..
+      <br /><br />
+      In my first year of work, I was promoted to advanced developer, and at the
+      beginning of my second year, I was promoted to project leader.
+    </p>
+
+    <div class="inline-flex flex-wrap gap-2">
+      <Tech
+        name="HTML"
+        styles="border-[#e44d26]  dark:bg-transparent dark:text-[#e44d26]"
+        icon={HTML}
+      />
+      <Tech
+        name="CSS"
+        styles="border-[#1172b8]  dark:bg-transparent dark:text-[#1172b8]"
+        icon={CSS}
+      />
+      <Tech
+        name="JS"
+        styles="border-[#f5de19]  dark:bg-transparent dark:text-[#f5de19]"
+        icon={JS}
+      />
+      <Tech
+        name="PHP"
+        styles="border-[#777bb3]  dark:bg-transparent dark:text-[#777bb3]"
+        icon={PHP}
+      />
+      <Tech
+        name="MySQL"
+        styles="border-[#00758f]  dark:bg-transparent dark:text-[#00758f]"
+        icon={MYSQL}
+      />
+      <Tech
+        name="Git"
+        styles="border-[#ee513b]  dark:bg-transparent dark:text-[#ee513b]"
+        icon={GIT}
+      />
+    </div>
+  </div>

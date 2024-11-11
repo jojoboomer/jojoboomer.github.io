@@ -1,0 +1,28 @@
+---
+import Container from "@layouts/Container.astro";
+import Tech from "../Tech.astro";
+import HTML from "@icons/technologies//Html.astro";
+import CSS from "@icons/technologies//Css.astro";
+import JS from "@icons/technologies//Javascript.astro";
+import PHP from "@icons/technologies//Php.astro";
+import MYSQL from "@icons/technologies//Mysql.astro";
+import GIT from "@icons/technologies//Git.astro";
+import CardWork from "./CardWork.astro";
+import CardContainer from "./CardContainer.astro";
+---
+
+<Container styles="" id="work" title="Work History">
+  <article class="-my-6">
+    <CardContainer
+      role="Full-stack developer"
+      place="Xetid, Havana"
+      date="Jan, 2022"
+      techs={["HTML", "CSS", "JS", "PHP", "MySQL", "Git"]}
+    />
+    <CardContainer
+      role="Graduated with a degree in Computer Science Engineering"
+      place="UCI, Havana"
+      date="Dec, 2021"
+    />
+  </article>
+</Container>

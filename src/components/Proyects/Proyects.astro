@@ -1,15 +1,23 @@
 ---
-import Card from './Card.astro'
-import Container from '@layouts/Container.astro'
-import {SITES, PROYECTS} from '../../types/utils'
-
+import Container from "@layouts/Container.astro";
+import { SITES, PROYECTS } from "../../types/utils";
+import CardImage from "@components/CardImage.astro";
 ---
 
 <Container styles="" id="proyects" title="Proyects">
-  <article class="w-full flex flex-col gap-2 md:gap-4">
+  <!-- <article class="w-full flex flex-col gap-2 md:gap-4"> -->
+  <article class="w-full grid grid-cols-1 gap-2">
     {
       PROYECTS.map((e) => {
-        return <Card title={e.title} content={e.description} tecs={e.tecs} image={e.image} to={SITES.proyect_1} />
+        return (
+          <CardImage
+            title={e.title}
+            description={e.description}
+            img={e.image}
+            github={e.github}
+            site={e.site}
+          />
+        );
       })
     }
   </article>

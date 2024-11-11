@@ -1,12 +1,12 @@
 ---
-import ThemeToggle from './Header/ThemeToggle.astro'
-import type {ROUTE} from '../types/utils'
+import type { ROUTE } from "../types/utils";
+import ThemeToggle from "./ThemeToggle.astro";
 
 interface Props {
-  items: ROUTE[]
+  items: ROUTE[];
 }
 
-const { items } = Astro.props
+const { items } = Astro.props;
 ---
 
 <section
@@ -22,22 +22,24 @@ const { items } = Astro.props
               {name}
             </a>
           </li>
-        )
+        );
       })
     }
-    <li class="flex justify-center items-center translate-y-16"><ThemeToggle /></li>
+    <li class="flex justify-center items-center translate-y-16">
+      <ThemeToggle />
+    </li>
   </ul>
 </section>
 
 <script>
-  const links = document.querySelectorAll('#side-menu a')
-  const $body = document.querySelector('body')
+  const links = document.querySelectorAll("#side-menu a");
+  const $body = document.querySelector("body");
 
   links.forEach((link) => {
-    link.addEventListener('click', () => {
-      $body?.toggleAttribute('menu-open')
-    })
-  })
+    link.addEventListener("click", () => {
+      $body?.toggleAttribute("menu-open");
+    });
+  });
 </script>
 
 <style>

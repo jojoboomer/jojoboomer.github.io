@@ -1,0 +1,33 @@
+---
+import ButtonPrimary from "@components/ButtonPrimary.astro";
+
+const { title = "Title", description = "Description", img, github, site } = Astro.props;
+---
+
+<article class="flex flex-col items-center rounded-lg shadow md:flex-row">
+    <img 
+        class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" 
+        src={img}
+        alt={title}
+    >
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+        <div class="flex gap-2">
+            <ButtonPrimary label="Github" to={github} colors="border-primary-700 hover:bg-primary-700 text-primary-700 hover:text-white dark:border-white dark:hover:bg-white dark:text-white dark:hover:text-primary-700" />
+            <ButtonPrimary label="Visit site" to={site} colors="border-primary-700 hover:bg-primary-700 text-primary-700 hover:text-white dark:border-white dark:hover:bg-white dark:text-white dark:hover:text-primary-700" />
+        </div>
+    </div>
+</article>
+
+<!-- <div class="w-full flex gap-32 p-2 overflow-hidden">
+    <div class="border-primary w-1/4 aspect-square">
+        <img src={'/placeholder-image.webp'} alt="" class=" rounded-xl">
+    </div>
+    <div class="flex flex-col gap-2 flex-grow">
+        <h5>{title}</h5>
+        <p>dasdasdsadsadsadsadsadasd</p>
+    </div>
+
+</div>
+   -->

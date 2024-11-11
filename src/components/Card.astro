@@ -1,0 +1,109 @@
+---
+interface Props {
+  title: string;
+  width?: string;
+  height?: string;
+}
+
+const { title, width = "auto", height = "auto" } = Astro.props;
+---
+
+<article>
+  <h5>{title}</h5>
+  <div>
+    <slot />
+  </div>
+</article>
+
+<style is:global>
+  :root {
+    --active: 0;
+  }
+</style>
+
+<style define:vars={{ width, height }}>
+  div {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h5 {
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  article {
+    padding: 10px;
+    overflow: hidden;
+    background: hsl(0 0% 10%);
+    height: var(--height);
+    width: var(--width);
+    position: relative;
+    transition: background 0.1s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+  }
+
+  article:hover {
+    --active: 1;
+  }
+
+  article:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at calc(var(--x) * 1px) calc(var(--y) * 1px),
+      hsl(0 0% 100% / 0.15),
+      transparent 20vmin
+    );
+    background-attachment: fixed;
+    opacity: var(--active, 0);
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+
+  article:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at calc(var(--x) * 1px) calc(var(--y) * 1px),
+        hsl(0 0% 100% / 0.5),
+        transparent 15vmin
+      ),
+      transparent;
+    background-attachment: fixed;
+    pointer-events: none;
+    mask:
+      linear-gradient(white, white) 50% 0 / 100% 4px no-repeat,
+      linear-gradient(white, white) 50% 100% / 100% 4px no-repeat,
+      linear-gradient(white, white) 0 50% / 4px 100% no-repeat,
+      linear-gradient(white, white) 100% 50% / 4px 100% no-repeat;
+  }
+
+  span {
+    font-family: sans-serif, system-ui;
+    position: absolute;
+    bottom: 0.65rem;
+    right: 0.65rem;
+    font-weight: bold;
+    font-size: 2rem;
+    color: hsl(0 0% 100%);
+  }
+</style>
+
+<script>
+  const updateCursor = ({ x, y }) => {
+    document.documentElement.style.setProperty("--x", x);
+    document.documentElement.style.setProperty("--y", y);
+  };
+
+  document.body.addEventListener("pointermove", updateCursor);
+</script>

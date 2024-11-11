@@ -1,0 +1,16 @@
+---
+import Tech from "../Tech.astro";
+
+interface Props {
+  techs?: string[];
+}
+
+const { techs } = Astro.props;
+
+---
+
+<div class="inline-flex flex-wrap gap-2">
+    {techs && techs.map((e) => {
+      return <Tech name={e} styles="border-[#ee513b]  dark:bg-transparent dark:text-[#ee513b]" icon={e} />
+    })}
+  </div>

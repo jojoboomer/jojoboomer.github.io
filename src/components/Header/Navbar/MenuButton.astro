@@ -1,0 +1,45 @@
+---
+const { styles } = Astro.props;
+interface Props {
+  styles: string;
+}
+---
+
+<div
+  id="button-menu"
+  class:list={[
+    "mx-3 flex h-10 w-8 cursor-pointer flex-col items-center justify-center gap-1 transition duration-300 ease-in-out",
+    styles,
+  ]}
+>
+  <span
+    class="h-1 w-full rounded-full bg-black dark:bg-white transition duration-500 ease-in-out"
+  ></span>
+  <span
+    class="h-1 w-full rounded-full bg-black dark:bg-white transition duration-500 ease-in-out"
+  ></span>
+  <span
+    class="h-1 w-full rounded-full bg-black dark:bg-white transition duration-500 ease-in-out"
+  ></span>
+</div>
+
+<script>
+  const $btn = document.querySelector("#button-menu");
+  const $body = document.querySelector("body");
+
+  $btn?.addEventListener("click", () => {
+    $body?.toggleAttribute("menu-open");
+  });
+</script>
+
+<style>
+  body[menu-open] #button-menu span:nth-child(1) {
+    @apply z-30 translate-y-2 rotate-45 bg-white;
+  }
+  body[menu-open] #button-menu span:nth-child(2) {
+    @apply scale-0 opacity-0;
+  }
+  body[menu-open] #button-menu span:nth-child(3) {
+    @apply z-30 -translate-y-2 -rotate-45 bg-white;
+  }
+</style>

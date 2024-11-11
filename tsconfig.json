@@ -9,7 +9,6 @@
       "@pages/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@assets/*": ["src/assets/*"]
-      
     }
   }
 }
