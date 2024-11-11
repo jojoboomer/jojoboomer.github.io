@@ -2,8 +2,6 @@
 import Tech from "@components/Tech.astro";
 import Github from "@icons/social/Github.astro";
 import Link from "@icons/LinkTo.astro";
-import ImagePlaceholder from "@assets/images/placeholder-image.webp";
-import { Image } from "astro:assets";
 
 import type { SITE } from "../../types/utils";
 
@@ -52,7 +50,8 @@ const btnStyles =
   </div>
   <div class="hidden lg:row-span-4 lg:block object-cover">
     <img
-      src={image ? image : ImagePlaceholder}
+      src={typeof image === 'string' ? image : "./placeholder-image.webp"}
+
       alt={title}
       class="size-[250px] rounded-sm object-center object-contain"
     />
