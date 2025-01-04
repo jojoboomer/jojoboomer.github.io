@@ -1,16 +1,16 @@
 ---
-const { h = 25, w = 25, styles } = Astro.props;
 interface Props {
   styles?: string;
   h?: string;
   w?: string;
 }
+const { h = 25, w = 25, styles } = Astro.props;
 ---
 
 <svg
   width={w}
   height={h}
-  class="w-8 h-8 fill-neutral-50"
+  class=" fill-neutral-50"
   preserveAspectRatio="xMidYMid meet"
   viewBox="0 0 100 100"
   x="0"

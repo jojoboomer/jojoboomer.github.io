@@ -14,5 +14,5 @@ interface Props {
     colors,
   ]}
 >
-  <button class="px-5 py-2"><a href={to} target="_blank">{label}</a></button>
+  {to ? <a class="px-5 py-2" href={to} target="_blank">{label}</a> : <div class="px-5 py-2">{label}</div>}
 </div>

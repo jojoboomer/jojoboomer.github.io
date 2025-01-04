@@ -1,11 +1,11 @@
 ---
-import ArrowDown from "@icons/ArrowDown.astro";
-import Github from "@icons/social/Github.astro";
 import ButtonIcon from "@components/ButtonIcon.astro";
-import Linkedin from "@icons/social/Linkedin.astro";
-import Email from "@icons/social/Email.astro";
-import { SOCIAL } from "../../types/utils";
 import ButtonPrimary from "@components/ButtonPrimary.astro";
+import ArrowDown from "@icons/ArrowDown.astro";
+import Email from "@icons/social/Email.astro";
+import Github from "@icons/social/Github.astro";
+import Linkedin from "@icons/social/Linkedin.astro";
+import { SOCIAL } from "../../types/utils";
 ---
 
 <div class="bg-primary dark:bg-transparent shadow-sm">
@@ -20,23 +20,20 @@ import ButtonPrimary from "@components/ButtonPrimary.astro";
         <article
           class="flex flex-col items-center md:items-start justify-center text-white uppercase"
         >
-          <h2 class="text-6xl">Hi</h2>
-          <h2 class="text-6xl">I'm john doe</h2>
-          <h2 class="text-6xl">Front-end developer</h2>
-          <!-- <h3 class="text-4xl font-semibold">My name is</h3> -->
-          <!-- <h2 class="text-7xl ">Joel Labrada</h2> -->
-          <!-- <h3 class="text-4xl font-semibold">Front-end web developer</h3> -->
+          <h3 class="text-4xl font-semibold">My name is</h3> 
+          <h2 class="text-7xl ">Joel Labrada</h2>
+           <h3 class="text-4xl font-semibold">I'm a Front-end web developer</h3>
         </article>
         <article class="flex gap-8 justify-start items-center">
-          <div class="justify-start gap-6 flex">
+          <div class="justify-start items-center gap-6 flex">
             <ButtonIcon to={SOCIAL.github}>
               <Github w="25" h="25" styles="fill-white" />
             </ButtonIcon>
-            <ButtonIcon to={SOCIAL.github}>
+            <ButtonIcon to={SOCIAL.email}>
               <Email w="25" h="25" styles="fill-white" />
             </ButtonIcon>
-            <ButtonIcon to={SOCIAL.github}>
-              <Linkedin w="25" h="25" styles="fill-white" />
+            <ButtonIcon to={SOCIAL.linkedin}>
+              <Linkedin w="24" h="24" styles="fill-white" />
             </ButtonIcon>
           </div>
           <div class="flex items-end gap-2 justify-center md:justify-start">

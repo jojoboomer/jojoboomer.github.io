@@ -1,16 +1,16 @@
 ---
 
+import BackIcon from "@icons/BackIcon.astro";
+import DatabaseIcon from "@icons/DatabaseIcon.astro";
+import FrontIcon from "@icons/FrontIcon.astro";
+import OthersIcon from "@icons/OthersIcon.astro";
+import WebIcon from "@icons/WebIcon.astro";
 import Container from "@layouts/Container.astro";
 import Stack from "./Stack.astro";
-import WebIcon from "@icons/WebIcon.astro";
-import FrontIcon from "@icons/FrontIcon.astro";
-import DatabaseIcon from "@icons/DatabaseIcon.astro";
-import OthersIcon from "@icons/OthersIcon.astro";
-import BackIcon from "@icons/BackIcon.astro";
 ---
 
 <Container styles="" id="about" title="Skills">
-  <article class="w-full grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+  <article class="w-full grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5">
     <Stack
       icon={WebIcon}
       techs={["HTML & CSS", "Javascript", "Typescript", "JQuery", "Three.js"]}
@@ -18,15 +18,15 @@ import BackIcon from "@icons/BackIcon.astro";
     />
     <Stack
       icon={FrontIcon}
-      techs={["Astro", "React", "Next.js", "Tailwind"]}
+      techs={["Astro", "React", "Next.js", "Tailwind", "Styled Comps"]}
       title="Frontend development"
     />
-    <Stack icon={BackIcon} techs={["Node", "PHP"]} title="Backend development" />
+    <Stack icon={BackIcon} techs={["Node", "PHP", "Strapi (CMS)"]} title="Backend development" />
     <Stack
       icon={DatabaseIcon}
-      techs={["PHP", "Node", "MySql", "MongoDB"]}
+      techs={[ "MySql", "MongoDB"]}
       title="Databases"
     />
-    <Stack icon={OthersIcon} techs={["Git"]} title="Other tools" />
+    <Stack icon={OthersIcon} techs={["Git", ]} title="Other tools" />
   </article>
 </Container>

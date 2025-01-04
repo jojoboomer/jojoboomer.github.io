@@ -22,6 +22,14 @@ interface PROYECT {
 
 export const PROYECTS: PROYECT[] = [
   {
+    title: "REAL STATE MBP",
+    description: `This project was developed as freelancer for a Real State agent in the United States. The site was created with Astro and React and the backend is developed in Strapi. Resend is used for the mail service. For deployment I use Vercel and Railways`,
+    time: "Dec-2024 - present",
+    image: "/mbp.jpg",
+    github: "",
+    site: "",
+  },
+  {
     title: "REACT GAME CENTER",
     description: `This is a personal proyect to improve my skills in react and programming logic. 
     My goal is to create games while learning new technologies. At this moment the project
@@ -29,15 +37,6 @@ export const PROYECTS: PROYECT[] = [
     time: "Oct-2024 - present",
     image: "/game.webp",
     github: "https://github.com/jojosafk/react-game-center",
-    site: "",
-  },
-  {
-    title: "To-Do App",
-    description: `The clasic todo app to practice some basic features of web like
-     drag and drop, rest api, and more.`,
-    time: "Oct-2024 - present",
-    image: "/placeholder-image.webp",
-    github: "",
     site: "",
   },
 ];

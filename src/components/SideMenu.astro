@@ -35,6 +35,7 @@ const { items } = Astro.props;
   const links = document.querySelectorAll("#side-menu a");
   const $body = document.querySelector("body");
 
+
   links.forEach((link) => {
     link.addEventListener("click", () => {
       $body?.toggleAttribute("menu-open");

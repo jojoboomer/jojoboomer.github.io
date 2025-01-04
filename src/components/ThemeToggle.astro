@@ -41,6 +41,8 @@
 </style>
 
 <script>
+    const $body = document.querySelector("body");
+
   const getTheme = () => {
     if (typeof localStorage !== "undefined") {
       const storedTheme = localStorage.getItem("theme");
@@ -68,10 +70,13 @@
 
     const isDark = element.classList.contains("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    $body?.toggleAttribute("menu-open");
   };
 
   document.querySelectorAll("#themeToggle").forEach((e) => {
     e.addEventListener("click", handleToggleClick);
   });
+
   // document.getElementById("themeToggle")?.addEventListener("click", handleToggleClick);
 </script>
