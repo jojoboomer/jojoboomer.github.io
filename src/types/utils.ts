@@ -21,24 +21,32 @@ interface PROYECT {
 }
 
 export const PROYECTS: PROYECT[] = [
+  // {
+  //   title: "REAL STATE MBP",
+  //   description: `This project was developed as freelancer for a Real State agent in the United States. The site was created with Astro and React and the backend is developed in Strapi. Resend is used for the mail service. For deployment I use Vercel and Railways`,
+  //   time: "Dec-2024 - present",
+  //   image: "/mbp.jpg",
+  //   github: "",
+  //   site: "",
+  // },
   {
-    title: "REAL STATE MBP",
-    description: `This project was developed as freelancer for a Real State agent in the United States. The site was created with Astro and React and the backend is developed in Strapi. Resend is used for the mail service. For deployment I use Vercel and Railways`,
-    time: "Dec-2024 - present",
-    image: "/mbp.jpg",
-    github: "",
-    site: "",
+    title: "FRONTED MENTOR CHALLANGES",
+    description: `A site where I upload the solutions to the Frontend Mentor challenges. I develop the solutions using Astro + React + PandaCSS. `,
+    time: "Jan-2025 - present",
+    image: "/",
+    github: "https://github.com/jojoboomer/fronted-challanges",
+    site: "https://frontedchallanges.netlify.app/",
   },
-  {
-    title: "REACT GAME CENTER",
-    description: `This is a personal proyect to improve my skills in react and programming logic. 
-    My goal is to create games while learning new technologies. At this moment the project
-    has 3 games developed with react and three.js.`,
-    time: "Oct-2024 - present",
-    image: "/game.webp",
-    github: "https://github.com/jojosafk/react-game-center",
-    site: "",
-  },
+  // {
+  //   title: "REACT GAME CENTER",
+  //   description: `This is a personal proyect to improve my skills in react and programming logic. 
+  //   My goal is to create games while learning new technologies. At this moment the project
+  //   has 3 games developed with react and three.js.`,
+  //   time: "Oct-2024 - present",
+  //   image: "/game.webp",
+  //   github: "https://github.com/jojosafk/react-game-center",
+  //   site: "",
+  // },
 ];
 
 type SocialLinks = {
