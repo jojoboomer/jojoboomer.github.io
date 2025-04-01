@@ -55,7 +55,7 @@ type SocialLinks = {
 };
 
 export const SOCIAL: SocialLinks = {
-  github: "https://github.com/jojosafk",
+  github: "https://github.com/jojoboomer",
   linkedin: "https://www.linkedin.com/in/joellabrada",
   x: "https://x.com/jooeBoomer",
   email: "mailto:jjlabranate@gmail.com",
@@ -73,8 +73,8 @@ interface SITES {
 
 export const SITES: SITES = {
   portfolio: {
-    github: "https://github.com/jojosafk/portfolio",
-    site: "https://github.com/jojosafk/jojosafk.github.io",
+    github: "https://github.com/jojoboomer/jojoboomer.github.io",
+    site: "https://jojoboomer.github.io/",
   },
   proyect_1: {
     github: "https://github.com/jojosafk/react-game-center",
