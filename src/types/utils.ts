@@ -27,7 +27,7 @@ export const PROYECTS: PROYECT[] = [
     time: "Dec-2024 - present",
     image: "/mbp.jpg",
     github: "https://github.com/jojoboomer/realtor-web",
-    site: "",
+    site: "/no-site",
   },
   {
     title: "FRONTED MENTOR CHALLANGES",
@@ -38,12 +38,12 @@ export const PROYECTS: PROYECT[] = [
     site: "https://frontedchallanges.netlify.app/",
   },
   {
-    title: "API WORKOUT TRACKER",
-    description: `This proyect was created to improve my backend knowledge and practice what I already know about ExpressJs. It is located on Roadmap.sh as a challenge to develop. I used ExpressJs and Typescript for the backend, Supabase for the database and authentication and Swagger for API documentation.`,
-    time: "Jan-2025 - in progress",
-    image: "/",
-    github: "https://github.com/jojoboomer/api-workout-tracker",
-    site: "",
+    title: "TECHNICAL TEST (ECOMMERCE)",
+    description: `This project is the response to a technical test for a Cuban technology company. The challenge was to develop a basic e-commerce platform in a short amount of time (it took me 8 hours) whith React.`,
+    time: "March-2025 - in progress",
+    image: "/ecommerce-placeholder.png",
+    github: "https://github.com/jojoboomer/tt-ecommerce",
+    site: "https://tt-tecopos.netlify.app/",
   }
 ];
 
@@ -81,3 +81,5 @@ export const SITES: SITES = {
     site: "https://github.com/jojosafk/react-game-center",
   },
 };
+
+export const MASTERING: string = "React Native";
