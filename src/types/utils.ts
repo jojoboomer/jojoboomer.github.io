@@ -38,9 +38,17 @@ export const PROYECTS: PROYECT[] = [
     site: "https://frontedchallanges.netlify.app/",
   },
   {
+    title: "TECHNICAL TEST (TASK LIST)",
+    description: `This project is the response to a technical test for a Cuban technology company. The challenge was to develop a basic task list. The tech stack was React + SHADCN UI + SUPABASE. For this demo I used local storage instead of Supabase. `,
+    time: "2025",
+    image: "/preview_fronted.png",
+    github: "https://github.com/jojoboomer/tt-task-list",
+    site: "https://tasklist-tech.netlify.app/",
+  },
+  {
     title: "TECHNICAL TEST (ECOMMERCE)",
     description: `This project is the response to a technical test for a Cuban technology company. The challenge was to develop a basic e-commerce platform in a short amount of time (it took me 8 hours) whith React.`,
-    time: "March-2025 - in progress",
+    time: "2025",
     image: "/ecommerce-placeholder.png",
     github: "https://github.com/jojoboomer/tt-ecommerce",
     site: "https://tt-tecopos.netlify.app/",
