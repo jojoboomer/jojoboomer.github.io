@@ -64,7 +64,7 @@ export const PROYECTS: PROYECT[] = [
     title: "CHALLANGE DEMO - JO´S RESTAURANT",
     description: `Site description: The restaurant landing page project will require you to develop a website that showcases the restaurant's menu, reviews, and other essential information. You will need to pay attention to details such as layout, color scheme, typography, and responsiveness to create an aesthetically pleasing and user-friendly website. Show more on https://icodethis.com/pro-challenges/jos-restaurant-website`,
     time: "2025",
-    image: "/gamor.webp",
+    image: "/restaurant.jpg",
     github: "https://github.com/jojoboomer/challenge-restaurant-website",
     site: "https://icodethis.com/pro-challenges/jos-restaurant-website/341638",
   },
