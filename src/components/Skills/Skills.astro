@@ -5,6 +5,7 @@ import BackIcon from "@icons/BackIcon.astro";
 import DatabaseIcon from "@icons/DatabaseIcon.astro";
 import FrontIcon from "@icons/FrontIcon.astro";
 import OthersIcon from "@icons/OthersIcon.astro";
+import Tec from "@icons/Tec.astro";
 import Container from "@layouts/Container.astro";
 import Stack from "./Stack.astro";
 ---
@@ -14,7 +15,7 @@ import Stack from "./Stack.astro";
   <article class="w-full grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5">
     <Stack
       icon={FrontIcon}
-      techs={["Astro", "React", "Next.js", "Tailwind", "Panda CSS"]}
+      techs={["Astro", "React", "Next.js", "Tailwind", "CSS in JS"]}
       title="Frontend development"
     />
     <Stack icon={BackIcon} techs={["Typescript", "Express.js", "PHP"]} title="Backend development" />
@@ -23,6 +24,7 @@ import Stack from "./Stack.astro";
       techs={[ "MySql", "MongoDB"]}
       title="Databases"
     />
-    <Stack icon={OthersIcon} techs={["Git", "JQuery", "Three.js", "Strapi (CMS)" ]} title="Others" />
+    <Stack icon={OthersIcon} techs={["Git", "JQuery", "Strapi (CMS)" ]} title="Others" />
+    <Stack icon={Tec} techs={["React Native", "Three.js", "GSAP" ]} title="Learning" />
   </article>
 </Container>

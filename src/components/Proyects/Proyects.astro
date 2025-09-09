@@ -1,13 +1,17 @@
 ---
-import CardImage from "@components/CardImage.astro";
 import Title from "@components/Title.astro";
 import Container from "@layouts/Container.astro";
-import { PROYECTS } from "../../types/utils";
+import CollapsibleList from "./CollapsibleList.astro";
 ---
 
 <Container styles="" id="proyects">
   <Title>Proyects</Title>
-  <article class="w-full grid grid-cols-1 gap-2">
+  <div class="space-y-4">
+    <CollapsibleList title="Freelance" proyect_key="FREELANCE" open />
+    <CollapsibleList title="Technical tests" proyect_key="TECHNICAL" />
+    <CollapsibleList title="Challanges" proyect_key="CHALLANGE" />
+  </div>
+  <!-- <article class="w-full grid grid-cols-1 gap-2">
     {
       PROYECTS.map((e) => {
         return (
@@ -21,5 +25,5 @@ import { PROYECTS } from "../../types/utils";
         );
       })
     }
-  </article>
+  </article> -->
 </Container>

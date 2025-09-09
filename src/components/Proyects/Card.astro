@@ -1,7 +1,7 @@
 ---
 import Tech from "@components/Tech.astro";
-import Github from "@icons/social/Github.astro";
 import Link from "@icons/LinkTo.astro";
+import Github from "@icons/social/Github.astro";
 
 import type { SITE } from "../../types/utils";
 
@@ -20,7 +20,7 @@ interface Props {
 
 const { title, content, tecs, image, to } = Astro.props;
 const btnStyles =
-  "cursor-pointer border-transparent dark:border-primary bg-primary hover:bg-transparent dark:bg-transparent dark:text-[#fff] group-hover:dark:bg-primary group-hover:dark:text-[#000]";
+  "border-transparent dark:border-primary bg-primary hover:bg-transparent dark:bg-transparent dark:text-[#fff] group-hover:dark:bg-primary group-hover:dark:text-[#000]";
 ---
 
 <!-- <article class="grid grid-flow-col-dense grid-cols-2 grid-rows-3 group relative box-border w-full rounded-lg border bg-primary px-4 shadow dark:border-primary"> -->

@@ -1,0 +1,46 @@
+---
+import CardImage from '@components/CardImage.astro';
+import { cn } from '@lib/utils';
+import { PROYECTS } from 'src/types/utils';
+
+interface Props {
+  title: string;
+  proyect_key: string;
+  open?: boolean;
+  styles?: string;
+}
+
+const { title, proyect_key, open, styles } = Astro.props;
+---
+<details open={open} class={cn("group [&_summary::-webkit-details-marker]:hidden hover:opacity-90 transition-all duration-300", styles)}>
+    <summary
+    class="flex items-center justify-between gap-1.5 rounded-md bg-primary hover:cursor-pointer dark:bg-primary-700 p-4 text-gray-900 "
+    >
+        <h2 class="group-open:hidden text-lg font-medium uppercase">SHOW {title}</h2>
+        <h2 class="hidden group-open:block text-lg font-medium uppercase ">HIDE {title}</h2>
+        <svg
+          class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+    </summary>
+    <div class="py-8 px-4 ">
+    {
+        PROYECTS.filter((e) => e.title.includes(proyect_key)).map((e) => {
+            return (
+                <CardImage
+                    title={e.title}
+                    description={e.description}
+                    img={e.image}
+                    github={e.github}
+                    site={e.site}
+                />
+            );
+        })
+    }
+    </div>
+</details>
