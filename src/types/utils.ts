@@ -66,7 +66,7 @@ export const PROYECTS: PROYECT[] = [
     time: "2025",
     image: "/restaurant.jpg",
     github: "https://github.com/jojoboomer/challenge-restaurant-website",
-    site: "https://icodethis.com/pro-challenges/jos-restaurant-website/341638",
+    site: "https://restaurant-demo-icodethis.netlify.app/",
   },
 ];
 
