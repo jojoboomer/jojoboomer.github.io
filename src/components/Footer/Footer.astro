@@ -1,9 +1,10 @@
 ---
 import ButtonSocial from "@components/ButtonSocial.astro";
-import Email from "@icons/social//Email.astro";
-import Github from "@icons/social//Github.astro";
-import Linkedin from "@icons/social//Linkedin.astro";
+import Github from "@icons/social/Github.astro";
+import Linkedin from "@icons/social/Linkedin.astro";
+import { Mail } from "@lucide/astro";
 import { SITES, SOCIAL } from "../../types/utils";
+
 ---
 
 <footer
@@ -24,7 +25,7 @@ import { SITES, SOCIAL } from "../../types/utils";
       </div>
       <div>
         <ButtonSocial to={SOCIAL.email}>
-          <Email styles="fill-white " />
+          <Mail color="white" />
         </ButtonSocial>
       </div>
     </div>
