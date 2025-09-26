@@ -2,9 +2,9 @@
 import ButtonIcon from "@components/ButtonIcon.astro";
 import ButtonPrimary from "@components/ButtonPrimary.astro";
 import ArrowDown from "@icons/ArrowDown.astro";
-import Email from "@icons/social/Email.astro";
 import Github from "@icons/social/Github.astro";
 import Linkedin from "@icons/social/Linkedin.astro";
+import { Mail } from "@lucide/astro";
 import { SOCIAL } from "src/types/utils";
 ---
 
@@ -30,7 +30,7 @@ import { SOCIAL } from "src/types/utils";
               <Github w="25" h="25" styles="fill-white" />
             </ButtonIcon>
             <ButtonIcon to={SOCIAL.email}>
-              <Email w="25" h="25" styles="fill-white" />
+              <Mail width="25" height="25" color="white" />
             </ButtonIcon>
             <ButtonIcon to={SOCIAL.linkedin}>
               <Linkedin w="24" h="24" styles="fill-white" />
