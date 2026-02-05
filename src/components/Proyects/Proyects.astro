@@ -1,29 +1,15 @@
 ---
+import ProjectCard from "@components/Proyects/ProjectCard.astro";
 import Title from "@components/Title.astro";
 import Container from "@layouts/Container.astro";
-import CollapsibleList from "./CollapsibleList.astro";
+import { PROYECTS } from "src/types/utils";
 ---
 
 <Container styles="" id="proyects">
-  <Title>Proyects</Title>
-  <div class="space-y-4">
-    <CollapsibleList title="Freelance" proyect_key="FREELANCE" open />
-    <CollapsibleList title="Technical tests" proyect_key="TECHNICAL" />
-    <CollapsibleList title="Challanges" proyect_key="CHALLANGE" />
-  </div>
-  <!-- <article class="w-full grid grid-cols-1 gap-2">
-    {
-      PROYECTS.map((e) => {
-        return (
-          <CardImage
-            title={e.title}
-            description={e.description}
-            img={e.image}
-            github={e.github}
-            site={e.site}
-          />
-        );
-      })
-    }
-  </article> -->
+  <Title>Portfolio</Title>
+  <article class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {PROYECTS.map((p) => (
+      <ProjectCard proyecto={p} />
+    ))}
+  </article>
 </Container>

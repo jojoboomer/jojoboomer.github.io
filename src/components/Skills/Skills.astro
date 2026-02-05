@@ -2,29 +2,25 @@
 
 import Title from "@components/Title.astro";
 import BackIcon from "@icons/BackIcon.astro";
-import DatabaseIcon from "@icons/DatabaseIcon.astro";
 import FrontIcon from "@icons/FrontIcon.astro";
 import OthersIcon from "@icons/OthersIcon.astro";
-import Tec from "@icons/Tec.astro";
 import Container from "@layouts/Container.astro";
 import Stack from "./Stack.astro";
 ---
 
 <Container>
-  <Title>My Skills</Title>
-  <article class="w-full grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5">
+  <Title>What I can do</Title>
+  <article class="w-full grid gap-8 grid-cols-1 md:grid-cols-3">
     <Stack
       icon={FrontIcon}
-      techs={["Astro", "React", "Next.js", "Tailwind", "CSS in JS"]}
-      title="Frontend development"
+      techs={["Astro", "React", "Tailwind"]}
+      title="Front main stack"
     />
-    <Stack icon={BackIcon} techs={["Typescript", "Express.js", "PHP"]} title="Backend development" />
     <Stack
-      icon={DatabaseIcon}
-      techs={[ "MySql", "MongoDB"]}
-      title="Databases"
+      icon={BackIcon}
+      techs={["React", "Express.js", "MongoDB"]}
+      title="Full stack"
     />
-    <Stack icon={OthersIcon} techs={["Git", "JQuery", "Strapi (CMS)" ]} title="Others" />
-    <Stack icon={Tec} techs={["React Native", "Three.js", "GSAP" ]} title="Learning" />
+    <Stack icon={OthersIcon} techs={["React Native", "JQuery", "PHP", "Vue", "Strapi (CMS)" ]} title="Others" />
   </article>
 </Container>

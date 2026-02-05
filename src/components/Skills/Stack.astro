@@ -1,5 +1,5 @@
 ---
-import Tec from '@icons/Tec.astro';
+import Tec from "@icons/Tec.astro";
 
 interface Props {
   title: string;
@@ -10,14 +10,29 @@ interface Props {
 const { title, techs } = Astro.props;
 ---
 
-<article class="flex flex-col ">
-  <div class="flex items-center justify-center mb-4 gap-2">
-    {Astro.props.icon && <Astro.props.icon w="24" h="24" styles="fill-primary-700" />}
+<article class="flex flex-col">
+  <div class="flex items-center mb-4 gap-2">
+    {
+      Astro.props.icon && (
+        <Astro.props.icon w="24" h="24" styles="fill-primary-700" />
+      )
+    }
     <h4 class="text-xl font-semibold tracking-head">{title}</h4>
-  </div>  
-  <ul class="grid grid-cols-2 justify-center justify-items-center sm:justify-items-start">
-        {techs.map((e) => {
-            return <li class="flex items-center mb-1 leading-text tracking-text"><Tec w="14" h="14"/><span class="ml-2">{e}</span></li>
-        })}
+  </div>
+  <ul
+    class="grid grid-cols-2 justify-center justify-items-center sm:justify-items-start"
+  >
+    {
+      techs.map((e) => {
+        return (
+          <li class="flex items-center mb-1 leading-text tracking-text">
+            <>
+              <Tec w="14" h="14" />
+              <span class="ml-2">{e}</span>
+            </>
+          </li>
+        );
+      })
+    }
   </ul>
 </article>

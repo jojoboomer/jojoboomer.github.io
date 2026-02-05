@@ -1,0 +1,50 @@
+---
+import ButtonPrimary from "@components/ButtonPrimary.astro";
+
+interface Props {
+  proyecto: {
+    title: string;
+    description: string;
+    time: string;
+    image: string;
+    github: string;
+    site: string;
+  };
+}
+const { proyecto } = Astro.props as Props;
+---
+
+<article
+  class="flex flex-col bg-white/20 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-150 ease-in-out"
+>
+  <div class="h-48 w-full">
+    <img
+      src={proyecto.image}
+      alt={proyecto.title}
+      class="w-full h-full object-fill"
+    />
+  </div>
+  <div class="p-4 flex flex-col gap-3 flex-1">
+    <div class="space-y-2">
+      <h3 class="text-lg font-semibold leading-snug uppercase">
+        {proyecto.title}
+      </h3>
+      <span class="text-sm text-muted-foreground hidden md:inline"
+        >{proyecto.time}</span
+      >
+    </div>
+    <p class="text-lg flex-1">{proyecto.description}</p>
+  </div>
+  <div class="p-4 pt-2 flex items-center justify-end gap-3">
+    <ButtonPrimary
+      label="Github"
+      to={proyecto.github}
+      colors="border-primary-700 hover:bg-primary-700 text-primary-700 hover:text-white dark:border-white dark:hover:bg-white dark:text-white dark:hover:text-primary-700"
+    />
+    <ButtonPrimary
+      label="Live"
+      to={proyecto.site}
+      colors="border-primary-700 hover:bg-primary-700 text-primary-700 hover:text-white dark:border-white dark:hover:bg-white dark:text-white dark:hover:text-primary-700"
+    />
+  </div>
+</article>
